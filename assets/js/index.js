@@ -44,8 +44,6 @@ function getUserInfo() {
                 localStorage.removeItem('token');
                 // 2. 强制跳转到登录页面
                 location.href = '/login.html';
-            } else {
-                 console.log('执行了 complete回调');
             }
         } 
     })
@@ -61,7 +59,7 @@ function renderAvatar(user) {
     if (user.user_pic !== null) {
         // 3.1 渲染图片头像
         $('.layui-nav-img').attr('src', user.user_pic).show();
-        $('.text_avatar').hide();
+        $('.text-avatar').hide();
     } else {
         // 3.2 渲染文本头像
         $('.layui-nav-img').hide();
